@@ -9,6 +9,7 @@ int basePathHolds();
 void moveTo(char*);
 void moveBack();
 void goHome();
+char* getPath();
 
 void initializePath() {
     homePath = malloc(128 * sizeof(char*));
@@ -43,7 +44,9 @@ void printPath() {
                printf("/%s", currentPath[i]);
             }    
         }
-         
+    }
+    if (currentPathLength == 0) {
+        printf("/");
     }
 }
 
@@ -117,4 +120,41 @@ void printCompletePath() {
     for (int i=0;i<currentPathLength;i++) {
         printf("/%s", currentPath[i]);
     }
+    if (currentPathLength == 0){
+        printf("/");
+    }
+}
+
+char* getPath() {
+    int totalLength = 0;
+    for (int i=0;i<currentPathLength;i++) {
+        totalLength += strlen(currentPath[i]);
+    }
+    char* path = malloc((totalLength + currentPathLength + 1) * sizeof(char));
+    path[0] = '\0';
+    for (int i=0;i<currentPathLength;i++) {
+        strcat(path, "/");
+        strcat(path, currentPath[i]);    
+    }
+    if (strlen(path) == 0) {
+        return "/";
+    }
+    return path;
+}
+
+char* get_home() {
+    int totalLength = 0;
+    for (int i=0;i<homePathLength;i++) {
+        totalLength += strlen(homePath[i]);
+    }
+    char* path = malloc((totalLength + homePathLength + 1) * sizeof(char));
+    path[0] = '\0';
+    for (int i=0;i<currentPathLength;i++) {
+        strcat(path, "/");
+        strcat(path, homePath[i]);    
+    }
+    if (strlen(path) == 0) {
+        return "/";
+    }
+    return path;
 }
