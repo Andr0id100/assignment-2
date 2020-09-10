@@ -1,0 +1,20 @@
+
+vi &
+nano &
+ps
+kill 5748
+ps
+./main
+ps
+exit
+exit
+./sleeper &
+./sleeper &
+
+./sleeper &
+ping google.com &
+ps
+pinfo
+pinfo 12
+nightswatch -n 5 newborn
+git add *

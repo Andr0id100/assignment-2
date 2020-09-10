@@ -1,5 +1,6 @@
 #include "headers.h"
 #include "processmanager.h"
+#include "history.h"
 
 int count_tokens(char*, char);
 char** get_tokens(char*, char);
@@ -10,6 +11,8 @@ void input() {
     char* line = malloc(1 * sizeof(char));
     ssize_t len = 1;
     getline(&line, &len, stdin);
+    add_entry(line);
+
     // Removing the \n from input
     line[len-2] = '\0';
     // Replacing the tabs with spaces for ease of handling

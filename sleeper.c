@@ -1,5 +1,5 @@
 #include <unistd.h>
 
 void main() {
-    sleep(5);
+    sleep(1);
 }

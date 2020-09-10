@@ -36,7 +36,12 @@ void pinfo(char** args) {
     }    
     char* executable_path = malloc(128 * sizeof(char));    
     sprintf(file, "/proc/%s/exe", pid);
-    readlink(file, executable_path, 128);
-    printf("Executable Path -- %s\n", executable_path);
+    int response = readlink(file, executable_path, 128);
+    if (response > 0) {
+        printf("Executable Path -- %s\n", executable_path);
+    }
+    else {
+        printf("Couldn't get executable path\n");
+    }
     
 }

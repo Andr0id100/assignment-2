@@ -10,6 +10,7 @@ void move_to(char*);
 void move_back();
 void go_home();
 char* get_path();
+char* get_home();
 char* processed_path(char*);
 void print_complete_path();
 
@@ -25,6 +26,7 @@ void initialize_path() {
         
         token = strtok(NULL, "/");
     }
+    chdir(get_path());
 }
 void print_path() {
     if (current_path_length < home_path_length) {
@@ -100,6 +102,7 @@ void move_to(char* path) {
     struct stat info;
     int response = stat(final_path, &info);
     if (!response && S_ISDIR(info.st_mode)) {
+        chdir(final_path);
         current_path_length = 0;
         char* token = strtok(final_path, "/");
         while (token != NULL) {
@@ -117,6 +120,9 @@ void move_back() {
         printf("Cannot go any deeper\n");
     }
     else {
+        char* final_path = get_path();
+        strrchr(final_path, '/')[0] = '\0';
+        chdir(final_path);
         current_path_length--;
     }
 }
@@ -126,6 +132,7 @@ void go_home() {
         current_path[i] = home_path[i];
     }
     current_path_length = home_path_length;
+    chdir(get_home());
 }
 
 void print_complete_path() {

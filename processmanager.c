@@ -4,14 +4,8 @@
 #include "pwd.h"
 #include "echo.h"
 #include "pinfo.h"
-
-int* bg_pids;
-int bg_count;
-
-void start_list() {
-    bg_pids = malloc(64 * sizeof(int));
-    bg_count = 0;
-}
+#include "history.h"
+#include "newborn.h"
 
 void start_process(char** args) {
     // Checking if the requested program is builtin and calling the relevant one
@@ -33,6 +27,12 @@ void start_process(char** args) {
     else if (strcmp(args[0], "exit") == 0) {
         kill(getpid(), SIGINT);
     }
+    else if (strcmp(args[0], "history") == 0) {
+        history(args+1);
+    }
+    else if((strcmp(args[0], "nightswatch") == 0) && strcmp(args[3], "newborn") == 0) {
+        newborn(args+1);
+    }
     else {
         int bg = 0;
         int i = 0;
@@ -48,12 +48,12 @@ void start_process(char** args) {
             i++;
         }
 
-        for (int j=0;j<i;j++) {
-            printf("%s\n", args[j]);
-        }
 
         int id = fork();
         if (id == 0) {
+            if (bg) {
+                setpgid(0, 0);
+            }
             int return_value = execvp(args[0], args);    
             if (return_value == -1) {
                 perror("Cannot run the command");
@@ -61,36 +61,12 @@ void start_process(char** args) {
         }
 
         else {
-            if (bg) {
-                // Do something here
-            }
-
-            else {
+            
+            if(!bg) {
                 int status;
                 waitpid(id, &status, 0);
-                // if (WIFEXITED(status)) {
-                //     int exit_status = WEXITSTATUS(status);
-                //     printf("Program exited successfully with status code %d\n", exit_status);
-                // }
             }
         }
-        
-        // else {
-        //     if (bg) {
-        //         bg_pids[bg_count++] = id;
-        //         printf("[%d] %d\n", bg_count, id);
-        //     }
-        //     else {
-        //         int status;
-        //         waitpid(id, &status, 0);
-        //         printf("Test\n\n\n");
-        //         if (WIFEXITED(status)) {
-        //             int exit_status = WEXITSTATUS(status);
-        //             printf("Programme exited with status %d\n\n\n", exit_status);
-
-        //         }
-        //     }
-        // }
     }
     free(args);
 }

@@ -22,13 +22,13 @@ int check_number(char* number) {
     return 1;
 }
 
-void main() {
-    int n = 1;
+void newborn(char** args) {
+    int n = strtol(args[1], NULL, 10);
+;
+    int c = 0;
     while(1) {
         sleep(n);
 
-
-        
         struct process list[300];
         
         DIR *directory;

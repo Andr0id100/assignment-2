@@ -4,10 +4,11 @@
 #include "processmanager.h"
 #include "input.h"
 
-int main() {
-    initialize_path();
-    start_list();
+void children_exit();
 
+int main() {
+    signal(SIGCHLD, children_exit);
+    initialize_path();
 
     size_t len = 0;
     while (1) {
@@ -16,3 +17,22 @@ int main() {
     }
     return 0;
 }
+
+
+void children_exit() {
+    pid_t pid;
+    int status;
+
+    while ((pid=waitpid(-1, &status, WNOHANG)) > 0){
+        if (WIFEXITED(status)) {
+            int exit_status = WEXITSTATUS(status);
+            printf("\nProgram with pid %d exited normally\n", pid);
+            return;
+        }
+        else {
+            printf("\nProgram with pid %d exited abnormally", pid);
+        }
+    }
+
+}
+

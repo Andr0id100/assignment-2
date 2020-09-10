@@ -87,7 +87,6 @@ void show_list(char* path, int l_flag, int a_flag){
     // else {
     //     final_path = path;
     // }
-
     DIR *directory;
     struct dirent *entry;
 
