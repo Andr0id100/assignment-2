@@ -5,7 +5,7 @@
 #include "input.h"
 
 int main() {
-    initializePath();
+    initialize_path();
     start_list();
 
 

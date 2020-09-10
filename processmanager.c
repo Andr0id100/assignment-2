@@ -5,12 +5,6 @@
 #include "echo.h"
 #include "pinfo.h"
 
-//  
-// 
-// Check getopt
-// 
-// 
-//
 int* bg_pids;
 int bg_count;
 
@@ -20,7 +14,7 @@ void start_list() {
 }
 
 void start_process(char** args) {
-    
+    // Checking if the requested program is builtin and calling the relevant one
     if (strcmp(args[0], "cd") == 0) {
         cd(args+1);
     }
@@ -54,6 +48,10 @@ void start_process(char** args) {
             i++;
         }
 
+        for (int j=0;j<i;j++) {
+            printf("%s\n", args[j]);
+        }
+
         int id = fork();
         if (id == 0) {
             int return_value = execvp(args[0], args);    
@@ -61,15 +59,38 @@ void start_process(char** args) {
                 perror("Cannot run the command");
             }
         }
-        
+
         else {
-            bg_pids[bg_count++] = id;
             if (bg) {
-                printf("[%d] %d\n", bg_count, id);
+                // Do something here
             }
+
             else {
-                wait(NULL);
+                int status;
+                waitpid(id, &status, 0);
+                // if (WIFEXITED(status)) {
+                //     int exit_status = WEXITSTATUS(status);
+                //     printf("Program exited successfully with status code %d\n", exit_status);
+                // }
             }
         }
+        
+        // else {
+        //     if (bg) {
+        //         bg_pids[bg_count++] = id;
+        //         printf("[%d] %d\n", bg_count, id);
+        //     }
+        //     else {
+        //         int status;
+        //         waitpid(id, &status, 0);
+        //         printf("Test\n\n\n");
+        //         if (WIFEXITED(status)) {
+        //             int exit_status = WEXITSTATUS(status);
+        //             printf("Programme exited with status %d\n\n\n", exit_status);
+
+        //         }
+        //     }
+        // }
     }
+    free(args);
 }

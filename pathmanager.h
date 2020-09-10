@@ -1,8 +1,9 @@
-void initializePath();
-void printPath();
-void moveTo(char*);
-void moveBack();
-void goHome();
-void printCompletePath();
-char* getPath();
+void initialize_path();
+void print_path();
+void move_to(char*);
+void move_back();
+void go_home();
+void print_complete_path();
+char* get_path();
 char* get_home();
+char* processed_path();

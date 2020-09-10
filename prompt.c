@@ -6,6 +6,6 @@ void prompt() {
     char* hostname = (char*)malloc(64 * sizeof(char));
     gethostname(hostname, 64);
     printf("\r<%s@%s:", pw->pw_name, hostname);
-    printPath();
+    print_path();
     printf(">");
 }

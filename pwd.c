@@ -2,6 +2,6 @@
 #include "pathmanager.h"
 
 void pwd() {
-    printCompletePath();
+    print_complete_path();
     printf("\n");
 }

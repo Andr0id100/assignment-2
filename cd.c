@@ -7,21 +7,20 @@ void cd(char ** args) {
     int count = count_args(args);
 
     if (count == 0) {
-            // printf("Blank\n");
-            goHome();
+            go_home();
         }
     else if (count == 1) {
         if (!strcmp(args[0], ".")) {
-            
+            // Do Nothing
         }
         else if(!strcmp(args[0], "..")){
-            moveBack();
+            move_back();
         }
         else if(!strcmp(args[0], "~")) {
-            goHome();
+            go_home();
         }
         else {
-            moveTo(args[0]);
+            move_to(args[0]);
         }
     }
 

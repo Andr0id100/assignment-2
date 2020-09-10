@@ -2,7 +2,7 @@
 #include "pathmanager.h"
 //
 // 
-// THe total thing
+// The total thing
 // 
 // 
 
@@ -67,67 +67,74 @@ int process_flags(char** args, int* l_flag, int* a_flag) {
         }
         i++;
     }
+    // Processed Sucessfully
     return 0;
 }
 
 void show_list(char* path, int l_flag, int a_flag){
-    char* final_path;
-    if (!strcmp(path, ".")) {
-        final_path = getPath();
-    }
-    else if(!strcmp(path, "..")) {
-        final_path = getPath();
-        char* pointer = strrchr(final_path, '/');
-        pointer[0] = '\0';
-    }
-    else if (!strcmp(path, "~")) {
-        final_path = get_home();
-    }
-    else {
-        final_path = path;
-    }
-
+    char* final_path = processed_path();
+    // if (!strcmp(path, ".")) {
+    //     final_path = getPath();
+    // }
+    // else if(!strcmp(path, "..")) {
+    //     final_path = getPath();
+    //     char* pointer = strrchr(final_path, '/');
+    //     pointer[0] = '\0';
+    // }
+    // else if (!strcmp(path, "~")) {
+    //     final_path = get_home();
+    // }
+    // else {
+    //     final_path = path;
+    // }
 
     DIR *directory;
     struct dirent *entry;
 
     directory = opendir(final_path);
-
-    if (l_flag) {
-        struct stat entry_info;
-        char* entry_path = malloc(512);
-        entry = readdir(directory);
-        while (entry != NULL) {
-            if (a_flag | (entry->d_name)[0] != '.'){
-                sprintf(entry_path, "%s/%s", final_path, entry->d_name);
-                stat(entry_path, &entry_info);
-                char* time = ctime(&(entry_info.st_mtime));
-                time = time + 4;
-                time[12] = '\0';
-                printf("%c%s%2ld %s %s %6ld %s %s\n",
-                    S_ISDIR(entry_info.st_mode)? 'd' : '-', 
-                    get_permissions(entry_info),
-                    entry_info.st_nlink,
-                    getpwuid(entry_info.st_uid)->pw_name,
-                    getpwuid(entry_info.st_gid)->pw_name,
-                    entry_info.st_size,
-                    time,
-                    entry->d_name
-                );
-            }  
-            entry = readdir(directory);
-        }
+    if (directory == NULL) {
+        perror("Invalid input");
     }
     else {
-        entry = readdir(directory);
-        while (entry != NULL) {
-            if (a_flag | (entry->d_name)[0] != '.'){
-                printf("%s\n", entry->d_name);
-            }
+        if (l_flag) {
+            struct stat entry_info;
+            char* entry_path = malloc(512);
             entry = readdir(directory);
+            int total_block_size = 0;
+            while (entry != NULL) {
+                if (a_flag | (entry->d_name)[0] != '.'){
+                    sprintf(entry_path, "%s/%s", final_path, entry->d_name);
+                    stat(entry_path, &entry_info);
+                    char* time = ctime(&(entry_info.st_mtime));
+                    time = time + 4;
+                    time[12] = '\0';
+                    printf("%c%s%3ld %s %s %6ld %s %s\n",
+                        S_ISDIR(entry_info.st_mode)? 'd' : '-', 
+                        get_permissions(entry_info),
+                        entry_info.st_nlink,
+                        getpwuid(entry_info.st_uid)->pw_name,
+                        getpwuid(entry_info.st_gid)->pw_name,
+                        entry_info.st_size,
+                        time,
+                        entry->d_name
+                    );
+                    total_block_size += entry_info.st_blocks;
+                }  
+                entry = readdir(directory);
+            }
+            // printf("total %d\n", total_block_size);
+        }
+        else {
+            entry = readdir(directory);
+            while (entry != NULL) {
+                if (a_flag | (entry->d_name)[0] != '.'){
+                    printf("%s\n", entry->d_name);
+                }
+                entry = readdir(directory);
+
+            }
 
         }
-
     }
 
 }

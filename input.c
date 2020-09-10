@@ -10,7 +10,9 @@ void input() {
     char* line = malloc(1 * sizeof(char));
     ssize_t len = 1;
     getline(&line, &len, stdin);
+    // Removing the \n from input
     line[len-2] = '\0';
+    // Replacing the tabs with spaces for ease of handling
     replace_tabs(line);
 
     // Dividing the input into separate commands to run
@@ -21,11 +23,9 @@ void input() {
     while (commands[i] != NULL) {
         // Breaking the command into separate components
         char** components = get_tokens(commands[i], ' ');
-        
         start_process(components);
         i++;
     }
-
 }
 
 void replace_tabs(char* line) {
@@ -46,7 +46,6 @@ char** get_tokens(char* input, char delim) {
     char* token = strtok(input, &delim);
     int i=0;
     while (token != NULL) {
-        // printf("%s\n", token);
         tokens[i++] = token;
         token = strtok(NULL, &delim);
     }
