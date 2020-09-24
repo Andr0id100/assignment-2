@@ -1,20 +1,49 @@
-
-vi &
-nano &
-ps
-kill 5748
-ps
-./main
-ps
+x:81:81:System Message B(snehal:/bin/bash
+x:81:81:System Message B(n:/home/snehal:/bin/bash
+x:81:81:System Message B(00:1000:Snehal Ranjan:/home/snehal:/bin/bash
+x:81:81:System Message B(Snehal Ranjan:/home/snehal:/bin/bash
+x:81:81:System Message B( Manager:/var/lib/sddm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+sort < prompt.c > output.txt
+n:/home/snehal:/bin/bash
+sort < prompt.c > output.txt
+home/snehal:/bin/bash
+sort < prompt.c > output.txt
+:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+sort < prompt.c >> output.txt
+ls >> output.txt
+sort < prompt.c >> output.txt
+ls -l >> output.txt
+Manager:/var/lib/sddm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+cd ..
+x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+cd ..
+n:/home/snehal:/bin/bash
+sort < prompt.c >> output.txt
+/snehal:/bin/bash
+cat output.txt
+snehal:/bin/bash
 exit
-exit
-./sleeper &
-./sleeper &
-
-./sleeper &
-ping google.com &
-ps
+r:/var/lib/sddm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+more output.txt
+in
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+clear
 pinfo
-pinfo 12
-nightswatch -n 5 newborn
-git add *
+in/bash
+pinfo 2
+r/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+pinfo 0
+dm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+pinfo 
+ehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+pinfo 1
+pinfo 1000

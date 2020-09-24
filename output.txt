@@ -1,0 +1,183 @@
+
+}
+    char* hostname = (char*)malloc(64 * sizeof(char));
+    gethostname(hostname, 64);
+#include "headers.h"
+#include "pathmanager.h"
+    printf(">");
+    printf("\r<%s@%s:", pw->pw_name, hostname);
+    print_path();
+    struct passwd* pw = getpwuid(getuid());
+void prompt() {
+
+}
+    char* hostname = (char*)malloc(64 * sizeof(char));
+    gethostname(hostname, 64);
+#include "headers.h"
+#include "pathmanager.h"
+    printf(">");
+    printf("\r<%s@%s:", pw->pw_name, hostname);
+    print_path();
+    struct passwd* pw = getpwuid(getuid());
+void prompt() {
+utils.c
+processmanager.h
+processmanager.c
+echo.h
+prompt.h
+pwd.c
+main
+sleeper.c
+main.c
+Tutorial-3
+pathmanager.h
+input.h
+newborn.c
+headers.h
+echo.c
+pathmanager.c
+makefile
+shell
+history.dat
+history.c
+prompt.c
+cd.h
+sleeper
+newborn.h
+history.h
+input.c
+test.c
+ls.c
+pinfo.c
+pinfo.h
+a.out
+cd.c
+pwd.h
+ls
+utils.h
+output.txt
+ls.h
+test
+assignment-2.code-workspace
+
+}
+    char* hostname = (char*)malloc(64 * sizeof(char));
+    gethostname(hostname, 64);
+#include "headers.h"
+#include "pathmanager.h"
+    printf(">");
+    printf("\r<%s@%s:", pw->pw_name, hostname);
+    print_path();
+    struct passwd* pw = getpwuid(getuid());
+void prompt() {
+-rw-r--r-  1 snehal snehal    281 Sep 23 18:13 utils.c
+-rw-r--r-  1 snehal snehal     27 Sep 22 19:51 processmanager.h
+-rw-r--r-  1 snehal snehal   3438 Sep 23 18:56 processmanager.c
+-rw-r--r-  1 snehal snehal     18 Sep 22 19:51 echo.h
+-rw-r--r-  1 snehal snehal     60 Sep 22 19:51 prompt.h
+-rw-r--r-  1 snehal snehal    106 Sep 22 19:51 pwd.c
+-rwxr-xr-  1 snehal snehal  23840 Sep 22 19:51 main
+-rw-r--r-  1 snehal snehal     50 Sep 22 19:51 sleeper.c
+-rw-r--r-  1 snehal snehal    698 Sep 22 19:51 main.c
+drwxr-xr-  2 snehal snehal   4096 Sep 16 15:19 Tutorial-3
+-rw-r--r-  1 snehal snehal    185 Sep 22 19:51 pathmanager.h
+-rw-r--r-  1 snehal snehal     13 Sep 22 19:51 input.h
+-rw-r--r-  1 snehal snehal   1630 Sep 22 19:51 newborn.c
+-rw-r--r-  1 snehal snehal    216 Sep 22 19:51 headers.h
+-rw-r--r-  1 snehal snehal    151 Sep 22 19:51 echo.c
+-rw-r--r-  1 snehal snehal   6075 Sep 22 19:51 pathmanager.c
+-rw-r--r-  1 snehal snehal    132 Sep 23 18:01 makefile
+-rwxr-xr-  1 snehal snehal  28936 Sep 23 18:56 shell
+-rw-r--r-  1 snehal snehal   1485 Sep 23 18:57 history.dat
+-rw-r--r-  1 snehal snehal   1597 Sep 22 19:51 history.c
+-rw-r--r-  1 snehal snehal    278 Sep 22 19:51 prompt.c
+-rw-r--r-  1 snehal snehal     16 Sep 22 19:51 cd.h
+-rwxr-xr-  1 snehal snehal   8304 Sep 22 19:51 sleeper
+-rw-r--r-  1 snehal snehal     21 Sep 22 19:51 newborn.h
+-rw-r--r-  1 snehal snehal     44 Sep 22 19:51 history.h
+-rw-r--r-  1 snehal snehal   1898 Sep 22 20:46 input.c
+-rw-r--r-  1 snehal snehal    957 Sep 22 19:51 test.c
+-rw-r--r-  1 snehal snehal   4319 Sep 22 19:51 ls.c
+-rw-r--r-  1 snehal snehal   1130 Sep 22 19:51 pinfo.c
+-rw-r--r-  1 snehal snehal     19 Sep 22 19:51 pinfo.h
+-rwxr-xr-  1 snehal snehal  12960 Sep 22 19:51 a.out
+-rw-r--r-  1 snehal snehal    611 Sep 22 19:51 cd.c
+-rw-r--r-  1 snehal snehal     11 Sep 22 19:51 pwd.h
+-rw-r--r-  1 snehal snehal      0 Sep 23 18:40 ls
+-rw-r--r-  1 snehal snehal     55 Sep 23 18:06 utils.h
+-rw-r--r-  1 snehal snehal   3134 Sep 23 18:57 output.txt
+-rw-r--r-  1 snehal snehal     16 Sep 22 19:51 ls.h
+-rwxr-xr-  1 snehal snehal   8432 Sep 22 19:51 test
+-rw-r--r-  1 snehal snehal    111 Sep 22 19:51 assignment-2.code-workspace
+-rw-r--r-  1 snehal snehal    281 Sep 23 18:13 utils.c
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swd
+-rw-r--r-  1 snehal snehal     27 Sep 22 19:51 processmanager.h
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swf
+-rw-r--r-  1 snehal snehal   3438 Sep 23 18:56 processmanager.c
+-rw-r--r-  1 snehal snehal     18 Sep 22 19:51 echo.h
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .test.c.swp
+-rw-r--r-  1 snehal snehal     60 Sep 22 19:51 prompt.h
+-rw-r--r-  1 snehal snehal    106 Sep 22 19:51 pwd.c
+-rwxr-xr-  1 snehal snehal  23840 Sep 22 19:51 main
+-rw-r--r-  1 snehal snehal     50 Sep 22 19:51 sleeper.c
+-rw-r--r-  1 snehal snehal    698 Sep 22 19:51 main.c
+drwxr-xr-  2 snehal snehal   4096 Sep 16 15:19 Tutorial-3
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swo
+-rw-r--r-  1 snehal snehal    185 Sep 22 19:51 pathmanager.h
+-rw-r--r-  1 snehal snehal     13 Sep 22 19:51 input.h
+-rw-r--r-  1 snehal snehal   1630 Sep 22 19:51 newborn.c
+-rw-r--r-  1 snehal snehal    216 Sep 22 19:51 headers.h
+-rw-r--r-  1 snehal snehal    151 Sep 22 19:51 echo.c
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swe
+-rw-r--r-  1 snehal snehal   6075 Sep 22 19:51 pathmanager.c
+-rw-r--r-  1 snehal snehal  12288 Sep 22 19:51 .swj
+-rw-r--r-  1 snehal snehal    132 Sep 23 18:01 makefile
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swn
+-rwxr-xr-  1 snehal snehal  28936 Sep 23 18:56 shell
+-rw-r--r-  1 snehal snehal   1603 Sep 23 18:58 history.dat
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swa
+-rw-r--r-  1 snehal snehal   1597 Sep 22 19:51 history.c
+drwxr-xr-  4 snehal snehal   4096 Sep 23 18:56 .
+-rw-r--r-  1 snehal snehal    278 Sep 22 19:51 prompt.c
+-rw-r--r-  1 snehal snehal     16 Sep 22 19:51 cd.h
+-rwxr-xr-  1 snehal snehal   8304 Sep 22 19:51 sleeper
+drwxr-xr-  8 snehal snehal   4096 Sep 22 19:51 .git
+-rw-r--r-  1 snehal snehal     21 Sep 22 19:51 newborn.h
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .svy
+-rw-r--r-  1 snehal snehal     44 Sep 22 19:51 history.h
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swh
+-rw-r--r-  1 snehal snehal   1898 Sep 22 20:46 input.c
+-rw-r--r-  1 snehal snehal    957 Sep 22 19:51 test.c
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swb
+-rw-r--r-  1 snehal snehal   4319 Sep 22 19:51 ls.c
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .svz
+-rw-r--r-  1 snehal snehal   1130 Sep 22 19:51 pinfo.c
+-rw-r--r-  1 snehal snehal     19 Sep 22 19:51 pinfo.h
+-rw-r--r-  1 snehal snehal  12288 Sep 22 19:51 .swk
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swp
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swg
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swl
+-rwxr-xr-  1 snehal snehal  12960 Sep 22 19:51 a.out
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swm
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swc
+drwxr-xr-  3 snehal snehal   4096 Sep 23 18:59 ..
+-rw-r--r-  1 snehal snehal    611 Sep 22 19:51 cd.c
+-rw-r--r-  1 snehal snehal     11 Sep 22 19:51 pwd.h
+-rw-r--r-  1 snehal snehal      0 Sep 23 18:40 ls
+-rw-r--r-  1 snehal snehal     55 Sep 23 18:06 utils.h
+-rw-r--r-  1 snehal snehal   6413 Sep 23 18:59 output.txt
+-rw-r--r-  1 snehal snehal     16 Sep 22 19:51 ls.h
+-rw-r--r-  1 snehal snehal   4096 Sep 22 19:51 .swi
+-rwxr-xr-  1 snehal snehal   8432 Sep 22 19:51 test
+-rw-r--r-  1 snehal snehal    111 Sep 22 19:51 assignment-2.code-workspace
+
+}
+    char* hostname = (char*)malloc(64 * sizeof(char));
+    gethostname(hostname, 64);
+#include "headers.h"
+#include "pathmanager.h"
+    printf(">");
+    printf("\r<%s@%s:", pw->pw_name, hostname);
+    print_path();
+    struct passwd* pw = getpwuid(getuid());
+void prompt() {
