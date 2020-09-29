@@ -1,44 +1,105 @@
 #include "headers.h"
 #include "pathmanager.h"
-//
-// 
-// The total thing
-// 
-// 
+#include "utils.h"
 
 int process_flags(char**, int*, int*);
 void show_list(char*, int, int);
 char* get_permissions(struct stat info);
 
-void ls(char** args) {
+int main(int argc, char** argv) {
     int l_flag = 0;
     int a_flag = 0;
 
-    if (process_flags(args, &l_flag, &a_flag) == -1) {
-        printf("Invalid Flag(s)\n");
+    int option;
+
+    while ((option = getopt(argc, argv, ":la")) != -1) {
+        switch (option)
+        {
+        case 'l':
+            l_flag = 1;
+            break;
+        case 'a':
+            a_flag = 1;
+            break;
+        default:
+            printf("Invalid flags\n");
+            exit(0);
+        }
+    }
+    if (argv[optind] == NULL) {
+        show_list(".", l_flag, a_flag);
+    }
+    else if(argv[optind+1] == NULL) {
+        show_list(argv[optind], l_flag, a_flag);
     }
     else {
-        // Only one path
-        if (args[0] == NULL) {
-            show_list(".", l_flag, a_flag);
-        }
-        else if (args[1] == NULL) {
-            show_list(args[0], l_flag, a_flag);
-        }
-
-        // Multiple Paths
-        else {
-            int i=0;
-            while (args[i] != NULL) {
-                printf("%s:\n", args[i]);
-                show_list(args[i], l_flag, a_flag);
-                printf("\n");
-                i++;
-            }
+        for (int i=optind;i<argc;i++) {
+            printf("%s:\n", argv[i]);
+            show_list(argv[optind], l_flag, a_flag);
+            printf("\n");
         }
     }
+    exit(0);
+
+    // if (process_flags(args, &l_flag, &a_flag) == -1) {
+    //     printf("Invalid Flag(s)\n");
+    // }
+    // else {
+    //     // Only one path
+    //     if (args[0] == NULL) {
+    //         show_list(".", l_flag, a_flag);
+    //     }
+    //     else if (args[1] == NULL) {
+    //         show_list(args[0], l_flag, a_flag);
+    //     }
+
+    //     // Multiple Paths
+    //     else {
+    //         int i=0;
+    //         while (args[i] != NULL) {
+    //             printf("%s:\n", args[i]);
+    //             show_list(args[i], l_flag, a_flag);
+    //             printf("\n");
+    //             i++;
+    //         }
+    //     }
+    // }
+    // exit(0);
         
 }
+
+
+
+// void ls(char** args) {
+//     int l_flag = 0;
+//     int a_flag = 0;
+
+//     if (process_flags(args, &l_flag, &a_flag) == -1) {
+//         printf("Invalid Flag(s)\n");
+//     }
+//     else {
+//         // Only one path
+//         if (args[0] == NULL) {
+//             show_list(".", l_flag, a_flag);
+//         }
+//         else if (args[1] == NULL) {
+//             show_list(args[0], l_flag, a_flag);
+//         }
+
+//         // Multiple Paths
+//         else {
+//             int i=0;
+//             while (args[i] != NULL) {
+//                 printf("%s:\n", args[i]);
+//                 show_list(args[i], l_flag, a_flag);
+//                 printf("\n");
+//                 i++;
+//             }
+//         }
+//     }
+//     exit(0);
+        
+// }
 
 
 int process_flags(char** args, int* l_flag, int* a_flag) {

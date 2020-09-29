@@ -14,3 +14,14 @@ void print_args(char** args) {
         printf("%s\n", args[i++]);
     }
 }
+
+int count_occurences(char** args, char* token) {
+    int c = 0;
+    int i = 0;
+    while (args[i] != NULL) {
+        if (strcmp(args[i], token) == 0)
+            c++;
+        i++;
+    }
+    return c;
+}

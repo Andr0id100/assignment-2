@@ -7,7 +7,7 @@
 void children_exit();
 
 int main() {
-    signal(SIGCHLD, children_exit);
+    // signal(SIGCHLD, children_exit);
     initialize_path();
 
     size_t len = 0;
