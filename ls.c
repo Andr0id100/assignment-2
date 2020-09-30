@@ -6,7 +6,7 @@ int process_flags(char**, int*, int*);
 void show_list(char*, int, int);
 char* get_permissions(struct stat info);
 
-int main(int argc, char** argv) {
+void ls(int argc, char** argv) {
     int l_flag = 0;
     int a_flag = 0;
 
@@ -39,7 +39,6 @@ int main(int argc, char** argv) {
             printf("\n");
         }
     }
-    exit(0);
 
     // if (process_flags(args, &l_flag, &a_flag) == -1) {
     //     printf("Invalid Flag(s)\n");

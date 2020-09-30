@@ -1,6 +1,6 @@
 #include "headers.h"
 
-int main(int argc, char** args) {
+void echo(int argc, char** args) {
     args++;
     int i = 0;
     while (args[i] != NULL) {

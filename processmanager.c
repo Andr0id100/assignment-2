@@ -13,13 +13,13 @@ void redirect_io(char **);
 void restore_io();
 void execute_process(char **, int[][2], int);
 void close_pipes(int[][2], int);
+int count_args(char**);
 
 int stdin_backup;
 int stdout_backup;
 
 void start_process(char **args)
 {   
-
     stdin_backup = dup(STDIN_FILENO);
     stdout_backup = dup(STDOUT_FILENO);
 
@@ -48,7 +48,7 @@ void start_process(char **args)
         if (strcmp(args[i], "|") == 0)
         {   
             args[i] = NULL;
-            redirect_io(args);
+            // redirect_io(args);
             execute_process(args, fdes, pipe_index);
             restore_io();
             args = args+i+1;
@@ -57,12 +57,16 @@ void start_process(char **args)
         }
         i++;
     }
-    redirect_io(args);
+    // redirect_io(args);
     execute_process(args, fdes, pipe_index == 0 ? -1 : pipe_index);
     restore_io();
 
     close_pipes(fdes, pipe_count);
 
+    wait(0);
+
+    for (int i=1;i<=pipe_count-1;i++)
+        wait(0);
 }
 
 int find_index(char **list, char *item)
@@ -132,6 +136,17 @@ void restore_io()
 
 void execute_process(char **args, int fdes[][2], int pipe_index)
 {
+    close(fdes[pipe_index][1]);
+
+    dup2(fdes[pipe_index][0], STDIN_FILENO);
+    dup2(fdes[pipe_index + 1][1], STDOUT_FILENO);
+
+    close(fdes[pipe_index][0]);
+    close(fdes[pipe_index + 1][1]);
+
+    redirect_io(args);
+
+
     if (strcmp(args[0], "cd") == 0)
     {
         cd(args + 1);
@@ -156,17 +171,16 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
     {
         newborn(args + 1);
     }
+    else if (strcmp(args[0], "ls") == 0)
+    {
+        ls(count_args(args), args);
+    }
+    else if (strcmp(args[0], "echo") == 0)
+    {
+        echo(count_args(args), args);
+    }
     else
     {
-        if (strcmp(args[0], "ls") == 0)
-        {
-            args[0] = "./ls";
-        }
-        else if (strcmp(args[0], "echo") == 0)
-        {
-            args[0] = "./echo";
-        }
-
         int bg = 0;
         int i = 0;
         while (args[i] != NULL)
@@ -185,21 +199,8 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
         }
 
         int id = fork();
-        if (id < 0) {
-        }
         if (id == 0)
         {   
-
-            close(fdes[pipe_index][1]);
-            close(fdes[pipe_index+1][0]);
-
-            dup2(fdes[pipe_index][0], STDIN_FILENO);
-            dup2(fdes[pipe_index + 1][1], STDOUT_FILENO);
-
-            close(fdes[pipe_index][0]);
-            close(fdes[pipe_index + 1][1]);
-
-
             if (bg)
             {
                 setpgid(0, 0);
@@ -220,6 +221,8 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
             }
         }
     }
+    close(fdes[pipe_index][0]);
+    close(fdes[pipe_index+1][1]);
 }
 
 
@@ -231,4 +234,3 @@ void close_pipes(int fdes[][2], int pipe_count) {
         //     fprintf(stderr, "Bad FD %d %d %d\n", i, i1, i2);
     }
 }
-
