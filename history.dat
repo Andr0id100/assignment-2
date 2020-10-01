@@ -1,20 +1,140 @@
-cat output.txt
-ls -la > output.txt
-cat output.txt | tail
-cat < output.txt
+jan:/home/snehal:/bin/bash
+vi &
+:q!
+1000:Snehal Ranjan:/home/snehal:/bin/bash
 clear
-ls | grep d-
+jobs
+firefox &
+nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+jobs
+top Display Manager:/var/lib/sddm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+clear
+:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+nano &
+cat output.txt &
+
+clear
+ps
+jpbs
+fireofx &
+clear
+firefox &
+chrome &
+google-chrome &
+google-chrome-stable &
+ps
+clear
+sp
+ps
+jobs
+
+clear
+ps
+jpbs
+/bash
+jobs
+/bin/bash
+clear
+jpbs
+jobs
+/bash
+nano &
+:Snehal Ranjan:/home/snehal:/bin/bash
+ps
+sh
+jobs
+/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+nano &
+n/bash
+ps
+jobs
+/home/snehal:/bin/bash
+clear
+n/bash
+pwd
+ps
+nano &
+ps
+jobs
+1000:Snehal Ranjan:/home/snehal:/bin/bash
+nano &
+n/bash
+jobs
+bin/bash
+pwd
+hal:/bin/bash
+nano &
+jobs
+bin/bash
+jobs
+/bin/bash
+nano &
+jobs
+/snehal:/bin/bash
+nano &
+:Snehal Ranjan:/home/snehal:/bin/bash
+jobs
+l:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+jobs
+
+nano &
+jobs
+ash
+nano &
+n/bash
+jobs
+
+ps &
+h
+nano &
+ps
+jobs
+
+nano &
 ls
-ls | wc
-ls | grep d
-ls | grep d >> output.txt
-clear
-cat output.txt
-clear
-ls | grep d >> output.txt
-cat output.txt
-cat < output.tx
-cat output.txt
-cat < output.txt | wc -l >> output.txt
-cat output.txt
-¾¹Á¨`º¹Á¨x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(x:81:81:System Message B(
+ps
+jobs
+h
+nano &
+ehal Ranjan:/home/snehal:/bin/bash
+jobs
+
+nano &
+ps
+jobs
+hal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+nano &
+x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+ps
+jobs
+:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+nano &
+jobs
+
+nano &
+ps
+jobs
+nano &
+:1000:Snehal Ranjan:/home/snehal:/bin/bash
+jobs
+h
+nano &
+hal Ranjan:/home/snehal:/bin/bash
+jobs
+
+nano &
+jobs
+nano &
+jpbs
+jobs
+firefox &
+nano &
+ps
+jobs
+ps
+jobs

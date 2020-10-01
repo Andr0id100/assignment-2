@@ -11,6 +11,14 @@ void input()
     // Declaring a small buffer which is resized by the getline function according to input size
     char *line = malloc(1 * sizeof(char));
     ssize_t len = 1;
+    
+    int c = getc(stdin);
+    if (c == EOF) {
+        printf("\n");
+        exit(0);
+    }
+    ungetc(c, stdin);
+
     getline(&line, &len, stdin);
     add_entry(line);
 

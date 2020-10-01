@@ -12,4 +12,6 @@ all:
 		history.c \
 		newborn.c \
 		processmanager.c \
+		linked_list.c \
+		env_var.c \
 		main.c -o shell

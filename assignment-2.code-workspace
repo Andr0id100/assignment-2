@@ -7,5 +7,9 @@
 			"path": "../../../Downloads/Tutorial2"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"typeinfo": "c"
+		}
+	}
 }

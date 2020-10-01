@@ -7,19 +7,27 @@
 #include "history.h"
 #include "newborn.h"
 #include "utils.h"
+#include "linked_list.h"
+#include "env_var.h"
 
 int find_index(char **, char *);
 void redirect_io(char **);
 void restore_io();
 void execute_process(char **, int[][2], int);
 void close_pipes(int[][2], int);
-int count_args(char**);
+int count_args(char **);
 
 int stdin_backup;
 int stdout_backup;
 
+int job_counter = 0;
+
+int is_background(char **);
+
 void start_process(char **args)
-{   
+{
+    int bg = is_background(args);
+
     stdin_backup = dup(STDIN_FILENO);
     stdout_backup = dup(STDOUT_FILENO);
 
@@ -35,24 +43,22 @@ void start_process(char **args)
     dup2(STDOUT_FILENO, fdes[pipe_count - 1][1]);
 
     close(fdes[0][1]);
-    close(fdes[pipe_count-1][0]);
-
+    close(fdes[pipe_count - 1][0]);
 
     int i = 0;
     int command_start = 0;
 
     int pipe_index = 0;
-
     while (args[i] != NULL)
     {
         if (strcmp(args[i], "|") == 0)
-        {   
+        {
             args[i] = NULL;
             // redirect_io(args);
             execute_process(args, fdes, pipe_index);
             restore_io();
-            args = args+i+1;
-            i=0;
+            args = args + i + 1;
+            i = 0;
             pipe_index++;
         }
         i++;
@@ -63,10 +69,11 @@ void start_process(char **args)
 
     close_pipes(fdes, pipe_count);
 
-    wait(0);
-
-    for (int i=1;i<=pipe_count-1;i++)
-        wait(0);
+    if (pipe_index != 0)
+    {
+        for (int i = 1; i <= pipe_count - 1; i++)
+            wait(0);
+    }
 }
 
 int find_index(char **list, char *item)
@@ -146,7 +153,6 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
 
     redirect_io(args);
 
-
     if (strcmp(args[0], "cd") == 0)
     {
         cd(args + 1);
@@ -179,6 +185,22 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
     {
         echo(count_args(args), args);
     }
+    else if (strcmp(args[0], "setenv") == 0)
+    {
+        // printf("setenv\n");
+        // print_args(args);
+        set_env(args);
+    }
+    else if (strcmp(args[0], "unsetenv") == 0)
+    {
+        // printf("unsetenv\n");
+        // print_args(args);
+        unset_env(args);
+    }
+    else if (strcmp(args[0], "jobs") == 0)
+    {
+        display_processes();
+    }
     else
     {
         int bg = 0;
@@ -200,7 +222,7 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
 
         int id = fork();
         if (id == 0)
-        {   
+        {
             if (bg)
             {
                 setpgid(0, 0);
@@ -214,6 +236,12 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
 
         else
         {
+
+            if (bg)
+            {
+                add_process(job_counter++, args[0], id);
+            }
+
             if (!bg && pipe_index == -1)
             {
                 int status;
@@ -222,15 +250,30 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
         }
     }
     close(fdes[pipe_index][0]);
-    close(fdes[pipe_index+1][1]);
+    close(fdes[pipe_index + 1][1]);
 }
 
-
-void close_pipes(int fdes[][2], int pipe_count) {
-    for (int i=0;i<pipe_count;i++) {
+void close_pipes(int fdes[][2], int pipe_count)
+{
+    for (int i = 0; i < pipe_count; i++)
+    {
         int i1 = close(fdes[i][0]);
         int i2 = close(fdes[i][1]);
         // if (i1 || i2)
         //     fprintf(stderr, "Bad FD %d %d %d\n", i, i1, i2);
     }
+}
+
+int is_background(char **args)
+{
+    int i = 0;
+    while (args[i] != NULL)
+    {
+        if (strcmp(args[i], "&") == 0)
+        {
+            return 1;
+        }
+        i++;
+    }
+    return 0;
 }

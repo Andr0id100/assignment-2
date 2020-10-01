@@ -3,12 +3,15 @@
 #include "pathmanager.h"
 #include "processmanager.h"
 #include "input.h"
+#include "linked_list.h"
 
 void children_exit();
 
 int main() {
     // signal(SIGCHLD, children_exit);
     initialize_path();
+    initialize_list();
+
 
     size_t len = 0;
     while (1) {

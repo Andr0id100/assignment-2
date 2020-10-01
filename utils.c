@@ -25,3 +25,11 @@ int count_occurences(char** args, char* token) {
     }
     return c;
 }
+
+int count_args(char** args) {
+    int c = 0;
+    while (args[c] != NULL) {
+        c++;
+    }
+    return c;
+}

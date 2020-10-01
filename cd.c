@@ -1,7 +1,6 @@
 #include "headers.h"
 #include "pathmanager.h"
-
-int count_args(char**);
+#include "utils.h"
 
 void cd(char ** args) {
     int count = count_args(args);
@@ -24,13 +23,4 @@ void cd(char ** args) {
         }
     }
 
-}
-
-
-int count_args(char** args) {
-    int c = 0;
-    while (args[c] != NULL) {
-        c++;
-    }
-    return c;
 }
