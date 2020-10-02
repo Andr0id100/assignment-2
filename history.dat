@@ -1,218 +1,221 @@
-htop &
-fg 1
-fg 2
+cat output.txt | wc > output.txt
+cat output.txt
+cat output.txt | ec
+cat output.txt | wc
+pwd
+clear
+history
 clear
-jobs
-nano &
-ehal Ranjan:/home/snehal:/bin/bash
+ls
+pwd
+history
+cd ..
+history
+cd   ..
+ls
 clear
-nano &
-nano &
-htop &
-jobs
-fg 3
-nano &
+history
+history Downloads
+cd Downloads
 clear
-jobs
-fg 3
-0:Snehal Ranjan:/home/snehal:/bin/bash
-nano &
-fg 1
+history | grep cd
+history
+history 5
 clear
-jobs
-nano &
+cd ~
 clear
-jobs
-fg 2
-clear
-jobs
-sleep 2
-sleep 2 &
-clear
-josb
-jobs
-nehal:/bin/bash
-nano &
-in/bash
-jobs
-fg 1
-jobs
-jobs
-clear
-jobs
-ps
-nano &
-sleep 5 &
-clear
-nano 
-jobs
-ps
-sleep 5 &
-jobs
-clear
-jobs
-fg 1
-jobs
+cd testing
+cd ..
 clear
 quit
-/usr/bin/nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+quit
+quit
+quit
+quit
+quit
 clear
-clear
-nano &
-fg 1
-jobs
-clear
-htop &
-jobs
-fg 2
-njan:/home/snehal:/bin/bash
-clear
-nano &
-htop &
-fg 2
-clear
-htop &
-jobs
-fg 1
-/usr/bin/nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-clear
-
-nano &
-jobs
-fg 1
-jobs
-htop &
-fg 2
-htop &
-clear
-fg 1
-clear
-htop &
-fg 2
-fg 1
-htop
-clear
-htop &
-fg 1
-clear
-/bash
-
-ash
-clear
-clear
-htop
-clear
-[1;5Anano
-clear
-htop
-nano &
-clear
-htop &
-htop
-htop
-htop
-htop
-clear
-nano &
-clear
-htop
-htop &
-jobs
-fg 2
-jobs
-jobs
-clear
-htop &
-jobs
-fg 3
-/bin/nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-clear
-nano
-vi
-clear
-nano &
-clear
-htop
-htop
-clear
-htop &
-jobs
-jobs
-fg 1
-jobs
-htop &
-jobs
-htop
-e/snehal:/bin/bash
-nano &
-clear
-jobs
-htop &
-jobs
-pinfo
-clear
-jobs
-fg 3
-jobs
-htop &
-jobs
-fg 1
-jobs
-clear
-jobs
-fg 5
-hal:/bin/bash
-clear
-
-
-clear
-htop
-htop 
-home/snehal:/bin/bash
-./shell
-clear
-nano 
-clear
-./shell
-0:Snehal Ranjan:/home/snehal:/bin/bash
-clear
-
-ls
 cd testing
-printenv PATH
-setenv PATH blah
-printenv PATH blah
+cd ..
 clear
-printenv HOME
-setenv HOME blah
-printenv HOME 
-unsetenv HOME
-printenv HOME
-printenv h
-unsetenv HOME
-unsetenv HOME
-unsetenv HOME
-printenv HOME
-printenv HOEME
-printenv HOME
-setenv HOME /home
-printenv HOME
-unsetenv HOME
-printenv HOME
+pwd
+cd ..
+cd ..
+cd ../..
+ls
+cd
+ls
 clear
+pwd
+history
 clear
+nano &
+clear
+htop &
+firefox &
+josbs
+jobs
+fg 1
+nano &
+fg 1
+clear
+nano &
+jobs
+jobs
+nano &
+jobs
+fg 4
+nano &
+nano &
+fg 1
+clear
+htop &
+clear
+jobs
+fg 1
+clear
+jobs
+fg 1
+bg 1
 nano &
 jobs
 jobs
 jobs
 clear
+jobs
+firefox &
+jobs
+kjob 6 9
+jobs
+quit
+nano &
+clear
+jobs
+htop &
+jobs
+clear
+nano &
+jobs
+jobs
+htop clear
+nano &
+jobs
+jobs 
+htop &
+jobs
+clear
+nano &
+clear
+jobs
+htop &
+jobs
+clear
+jobs
+fg 2
 jobs
 kjob 2 9
 jobs
-overkill
+kjob 1 9
+clear
+jobs
+ps
+clear
+nano
+ps
+clear
+josb
+jobs
+clear
+nano &
+jobs
+ps
+clear
+ps
+nano &
+jobs
+ps
+fg 1
+jobs
+ps
+l:/bin/bash
+jobs
+nano &
+jobs
+kjob 1 9
 jobs
 clear
 ps
+jobs
+htop &
+jobs
+overkill
+jobs
+ps
+clear
+cd -
+cd -
+cd -
+clear
+cd testing
+cd -
+cdehal:/bin/bash
+cd -
+clear
+cd testing
+cd -
+cd -
+cd -
+cd ..
+cd -
+cd -
+cd -
+cd -
+cd -
+cd -
+cd -
+cd -
+cd -
+clear
+history
+quit
+:/var/lib/sddm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+make
+clear
+jobs'
+jobs
+htop
+x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+htop
+bin/bash
+clear
+clear
+clear
+nano
+exit
+e/snehal:/bin/bash
+htop &
+fg 1
+clear
+htop &
+jobs
+jobs 
+clear
+htop &
+jobs
+firefox &
+jobs
+firefox &
+jobs
+sleep 5 &
+jobs
+jobs
+clear
+jobs
+fg 1
+jobs
+jobs
+clear
+htop
+clear
+clear

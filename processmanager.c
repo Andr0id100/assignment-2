@@ -22,8 +22,6 @@ int count_args(char **);
 int stdin_backup;
 int stdout_backup;
 
-int job_counter = 1;
-
 int is_background(char **);
 
 void start_process(char **args)
@@ -169,7 +167,7 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
     }
     else if (strcmp(args[0], "exit") == 0 || strcmp(args[0], "quit") == 0)
     {
-        kill(getpid(), SIGINT);
+        exit(0);
     }
     else if (strcmp(args[0], "history") == 0)
     {
@@ -251,8 +249,11 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
 
         else
         {
+            if (bg) {
+                add_process(args[0], id);
 
-            add_process(job_counter++, args[0], id);
+            }
+
 
             if (!bg && pipe_index == -1)
             {

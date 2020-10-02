@@ -14,7 +14,8 @@ void fg(char** args) {
         signal(SIGTTOU, SIG_IGN);
         tcsetpgrp(STDIN_FILENO, pid);
         kill(pid, SIGCONT);
-        wait(0);
+        int status;
+        waitpid(pid, &status, 0);
         tcsetpgrp(STDIN_FILENO, getpid());
         signal(SIGTTOU, SIG_DFL);
     }

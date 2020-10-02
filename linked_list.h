@@ -9,7 +9,7 @@ struct node {
 
 typedef struct node NODE;
 
-void add_process(int, char*, int);
+void add_process(char*, int);
 NODE* remove_process(int);
 NODE* remove_process_with_pid(int);
 void initialize_list();

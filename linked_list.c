@@ -17,11 +17,13 @@ void initialize_list() {
     head = NULL;
 }
 
-void add_process(int job_number, char* name, int pid) {
+int job_counter = 1;
+
+void add_process(char* name, int pid) {
 // void add_item(int pid) {
 
     NODE *process = (struct node*)malloc(sizeof(struct node));
-    process->job_number = job_number;
+    process->job_number = job_counter++;
     process->name = name;
     process->pid = pid;
     
@@ -122,7 +124,7 @@ int is_stopped(int pid) {
 
 void display_processes() {
     NODE* temp = head;
-    char* states[2] = {"Stopped", "Running"};
+    char* states[2] = {"Running", "Stopped"};
     while (temp != NULL) {
         int status = is_stopped(temp->pid);
         char* message;
@@ -159,17 +161,3 @@ void kill_all_children() {
     head = NULL;
 
 }
-
-// int main() {
-//     initialize_list;
-//     add_item(1);
-//     add_item(3);
-//     add_item(7);
-//     add_item(11);
-//     add_item(35);
-//     add_item(73);
-//     display();
-//     remove_item(3);
-//     display();
-//     return 0;
-// }

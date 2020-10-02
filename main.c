@@ -12,8 +12,10 @@ int SHELL_ID;
 int main()
 {
     SHELL_ID = getpid();
-    // signal(SIGTSTP, ctrl_z);
+    signal(SIGCHLD, SIG_IGN);
     signal(SIGINT, ctrl_c);
+    signal(SIGTSTP, ctrl_z);
+
     setpgid(0, 0);
 
     initialize_path();
@@ -30,7 +32,7 @@ int main()
 
 void ctrl_z()
 {
-    printf("\n\nHersdfsdgsfge\n\n");
+    printf("\n\nStopped from exit\n\n");
 
     // int current_fg_id = tcgetpgrp(STDIN_FILENO);
     // if (current_fg_id != SHELL_ID)

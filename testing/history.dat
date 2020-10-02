@@ -1,6 +1,3 @@
-nm-openvpn:x:969:969:NetworkManager OpenVPN:/:/usr/bin/nologin
-ntp:x:87:87:Network Time Protocol:/var/lib/ntp:/bin/false
-polkitd:x:102:102:PolicyKit daemon:/:/usr/bin/nologin
 rtkit:x:133:133:RealtimeKit:/proc:/usr/bin/nologin
 sddm:x:968:968:Simple Desktop Display Manager:/var/lib/sddm:/usr/bin/nologin
 usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
@@ -52,3 +49,13 @@ snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
 
 :x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
 clear
+/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+pwd
+in
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+cd ..
+mple Desktop Display Manager:/var/lib/sddm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+cd ..

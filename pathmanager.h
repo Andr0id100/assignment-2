@@ -7,3 +7,4 @@ void print_complete_path();
 char* get_path();
 char* get_home();
 char* processed_path();
+void past_pwd();

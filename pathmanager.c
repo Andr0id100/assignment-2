@@ -14,6 +14,8 @@ char* get_home();
 char* processed_path(char*);
 void print_complete_path();
 
+char* old_path = NULL;
+
 void initialize_path() {
     home_path = malloc(128 * sizeof(char*));
     current_path = malloc(128 * sizeof(char*));
@@ -38,7 +40,7 @@ void print_path() {
         if (base_path_holds()) {
             printf("~");
             if (current_path_length > home_path_length) {
-                for (int i=home_path_length;i<home_path_length;i++) {
+                for (int i=home_path_length;i<current_path_length;i++) {
                     printf("/%s", current_path[i]);
                 }
             }
@@ -73,35 +75,15 @@ void move_to(char* path) {
         final_path = path;
     }
 
-    // Path has flags
-    // else if (path[0] == '.' || path[0] == '~') {
-    //     final_path = processed_path(path);
-    // }
-
     // Path is relative
     else {
-        // int total_length;
-        // int l = 0;
-        // while (l < current_path_length) {
-        //     total_length += strlen(current_path[l++]);
-        // }
-        // final_path = malloc((total_length + strlen(path) + l + 1) * sizeof(char));
-        // final_path[0] = '\0';
-        // for (int i=0;i<current_path_length;i++) {
-        //     strcat(final_path, "/");
-        //     strcat(final_path, current_path[i]);
-        // }
-        // final_path = get_path();
-        // final_path = realloc(final_path, (strlen(final_path) + strlen(path) + 2));
-        
-        // strcat(final_path, "/");
-        // strcat(final_path, path);
         final_path = processed_path(path);
     }
 
     struct stat info;
     int response = stat(final_path, &info);
     if (!response && S_ISDIR(info.st_mode)) {
+        old_path = get_path();
         chdir(final_path);
         current_path_length = 0;
         char* token = strtok(final_path, "/");
@@ -121,6 +103,7 @@ void move_back() {
     }
     else {
         char* final_path = get_path();
+        old_path = get_path();
         strrchr(final_path, '/')[0] = '\0';
         chdir(final_path);
         current_path_length--;
@@ -128,6 +111,7 @@ void move_back() {
 }
 
 void go_home() {
+    old_path = get_path();
     for (int i=0;i<home_path_length;i++) {
         current_path[i] = home_path[i];
     }
@@ -183,24 +167,6 @@ char* processed_path(char* path) {
     char* processed = malloc(256 * sizeof(char));
     processed[0] = '\0';
     char* token = strtok(path, "/");
-    // while (token != NULL) {
-    //     if (!strcmp(token, ".")) {
-    //         strcat(processed, get_path());
-    //     }
-    //     else if(!strcmp(token, "..")) {
-    //         char* current_path = get_path();
-    //         strrchr(current_path, '/')[0] = '\0';
-    //         strcat(processed, current_path);
-    //     }
-    //     else if (!strcmp(token, "~")) {
-    //         strcat(processed, get_home());
-    //     }
-    //     else {
-    //         strcat(processed, "/");
-    //         strcat(processed, token);
-    //     }
-    //     token = strtok(NULL, "/");
-    // }
         if (!strcmp(token, ".")) {
             strcat(processed, get_path());
         }
@@ -224,4 +190,15 @@ char* processed_path(char* path) {
             token = strtok(NULL, "/");
         }
     return processed;   
+}
+
+void past_pwd() {
+    if (old_path == NULL) {
+        print_complete_path();
+        printf("\n");
+    }
+    else {
+        printf("%s\n", old_path);
+        move_to(old_path);
+    }
 }
