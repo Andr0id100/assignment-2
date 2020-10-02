@@ -14,4 +14,6 @@ all:
 		processmanager.c \
 		linked_list.c \
 		env_var.c \
+		kjob.c \
+		process_ground_changer.c \
 		main.c -o shell

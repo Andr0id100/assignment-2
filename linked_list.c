@@ -38,6 +38,34 @@ void add_process(int job_number, char* name, int pid) {
     }
 }
 
+NODE* remove_process_with_pid(int pid) {
+    if (head == NULL) {
+        return NULL;
+    }
+    else {
+        if (head->job_number == pid) {
+            NODE *response = head;
+            head = head->next;
+            response->next = NULL;
+            return response;
+        }
+
+        NODE *temp = head;
+        NODE *parent = head;
+        while (temp != NULL) {
+            if (temp->job_number == pid) {
+                NODE *response = temp;
+                parent->next = temp->next;
+                response->next = NULL;
+                return response;
+            }
+            parent = temp;
+            temp = temp->next;
+        }
+        return NULL;
+    }
+}
+
 NODE* remove_process(int job_number) {
     if (head == NULL) {
         return NULL;
@@ -56,7 +84,7 @@ NODE* remove_process(int job_number) {
             if (temp->job_number == job_number) {
                 NODE *response = temp;
                 parent->next = temp->next;
-                response->next = NULL;
+                // response->next = NULL;
                 return response;
             }
             parent = temp;
@@ -99,17 +127,38 @@ void display_processes() {
         int status = is_stopped(temp->pid);
         char* message;
         if (status == -1) {
-            message = "Dead"; 
+            // message = "Dead"; 
+            remove_process(temp->job_number);
         }
         else {
             message = states[status];
+            printf("[%d] %s %s [%d]\n", temp->job_number, message, temp->name, temp->pid);
         }
-        printf("[%d] %s %s [%d]\n", temp->job_number, message, temp->name, temp->pid);
         temp = temp->next;
     }
 }
 
+int get_pid(int job_number) {
+    NODE* temp = head;
+    while (temp != NULL) {
+        if (temp->job_number == job_number) {
+            return temp->pid;
+        }
+        temp = temp->next;
+    }
+    return -1;
+}
 
+
+void kill_all_children() {
+    NODE* temp = head;
+    while (temp != NULL) {
+        kill(temp->pid, SIGKILL);
+        temp = temp->next;
+    } 
+    head = NULL;
+
+}
 
 // int main() {
 //     initialize_list;

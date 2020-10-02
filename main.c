@@ -5,37 +5,54 @@
 #include "input.h"
 #include "linked_list.h"
 
-void children_exit();
+void ctrl_z();
+void ctrl_c();
+int SHELL_ID;
 
-int main() {
-    // signal(SIGCHLD, children_exit);
+int main()
+{
+    SHELL_ID = getpid();
+    signal(SIGTSTP, ctrl_z);
+    signal(SIGINT, ctrl_c);
+    setpgid(0, 0);
+
     initialize_path();
     initialize_list();
 
-
     size_t len = 0;
-    while (1) {
+    while (1)
+    {
         prompt();
         input();
     }
     return 0;
 }
 
+void ctrl_z()
+{
+        printf("\n\nHersdfsdgsfge\n\n");
 
-void children_exit() {
-    pid_t pid;
-    int status;
-
-    while ((pid=waitpid(-1, &status, WNOHANG)) > 0){
-        if (WIFEXITED(status)) {
-            int exit_status = WEXITSTATUS(status);
-            printf("\nProgram with pid %d exited normally\n", pid);
-            return;
-        }
-        else {
-            printf("\nProgram with pid %d exited abnormally", pid);
-        }
-    }
-
+    // int current_fg_id = tcgetpgrp(STDIN_FILENO);
+    // if (current_fg_id != SHELL_ID)
+    // {
+    //     printf("\nSHELL: %d, PROCESS: %d\n", SHELL_ID, getpid());
+    //     signal(SIGTTOU, SIG_IGN);
+    //     tcsetpgrp(STDIN_FILENO, SHELL_ID);
+    //     kill(SHELL_ID, SIGCONT);
+    //     wait(0);
+    //     signal(SIGTTOU, SIG_DFL);
+    // }
 }
 
+void ctrl_c()
+{
+    int current_fg_id = tcgetpgrp(STDIN_FILENO);
+    if (current_fg_id != SHELL_ID)
+    {
+        kill(current_fg_id, SIGINT);
+        tcsetpgrp(STDIN_FILENO, SHELL_ID);
+    }
+    else {
+        printf("\n");
+    }
+}

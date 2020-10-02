@@ -9,6 +9,8 @@
 #include "utils.h"
 #include "linked_list.h"
 #include "env_var.h"
+#include "kjob.h"
+#include "process_ground_changer.h"
 
 int find_index(char **, char *);
 void redirect_io(char **);
@@ -20,7 +22,7 @@ int count_args(char **);
 int stdin_backup;
 int stdout_backup;
 
-int job_counter = 0;
+int job_counter = 1;
 
 int is_background(char **);
 
@@ -165,7 +167,7 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
     {
         pwd();
     }
-    else if (strcmp(args[0], "exit") == 0)
+    else if (strcmp(args[0], "exit") == 0 ||  strcmp(args[0], "quit") == 0)
     {
         kill(getpid(), SIGINT);
     }
@@ -187,19 +189,27 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
     }
     else if (strcmp(args[0], "setenv") == 0)
     {
-        // printf("setenv\n");
-        // print_args(args);
         set_env(args);
     }
     else if (strcmp(args[0], "unsetenv") == 0)
     {
-        // printf("unsetenv\n");
-        // print_args(args);
         unset_env(args);
     }
     else if (strcmp(args[0], "jobs") == 0)
     {
         display_processes();
+    }
+    else if (strcmp(args[0], "kjob") == 0) {
+        kjob(args);
+    }
+    else if (strcmp(args[0], "fg") == 0) {
+        fg(args);
+    }
+    else if (strcmp(args[0], "bg") == 0) {
+        bg(args);
+    }
+    else if (strcmp(args[0], "overkill") == 0) {
+        kill_all_children();
     }
     else
     {
@@ -226,6 +236,7 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
             if (bg)
             {
                 setpgid(0, 0);
+                // kill(getpid(), SIGSTOP);
             }
             int return_value = execvp(args[0], args);
             if (return_value == -1)

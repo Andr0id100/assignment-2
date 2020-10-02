@@ -1,140 +1,210 @@
-jan:/home/snehal:/bin/bash
-vi &
-:q!
-1000:Snehal Ranjan:/home/snehal:/bin/bash
 clear
+htop &
 jobs
-firefox &
-nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-jobs
-top Display Manager:/var/lib/sddm:/usr/bin/nologin
-usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-clear
-:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+fg 2
 nano &
-cat output.txt &
-
-clear
-ps
-jpbs
-fireofx &
-clear
-firefox &
-chrome &
-google-chrome &
-google-chrome-stable &
-ps
-clear
-sp
-ps
+bash
+jobs
+fg 1
 jobs
 
 clear
-ps
-jpbs
-/bash
+nano &
+fg 1
 jobs
-/bin/bash
+n:/home/snehal:/bin/bash
+nano &
 clear
-jpbs
 jobs
-/bash
-nano &
-:Snehal Ranjan:/home/snehal:/bin/bash
-ps
-sh
-jobs
-/usr/bin/nologin
-usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-nano &
-n/bash
-ps
-jobs
-/home/snehal:/bin/bash
+fg 1
 clear
-n/bash
-pwd
-ps
 nano &
-ps
+fg 1
 jobs
-1000:Snehal Ranjan:/home/snehal:/bin/bash
-nano &
-n/bash
-jobs
+exit
+exit
 bin/bash
-pwd
-hal:/bin/bash
-nano &
-jobs
-bin/bash
-jobs
-/bin/bash
-nano &
-jobs
-/snehal:/bin/bash
-nano &
-:Snehal Ranjan:/home/snehal:/bin/bash
-jobs
-l:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-jobs
-
-nano &
-jobs
-ash
-nano &
-n/bash
-jobs
-
-ps &
-h
-nano &
-ps
-jobs
-
-nano &
+clear
+nano
+htop
 ls
-ps
-jobs
-h
+cat output.txt | wc
+clear
 nano &
-ehal Ranjan:/home/snehal:/bin/bash
-jobs
-
+fg 1
+htop &
+clear
+clear
+ome/snehal:/bin/bash
 nano &
-ps
-jobs
-hal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-nano &
-x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-ps
-jobs
+htop &
+clear
+fg 1
+htop &
 :1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
 nano &
 jobs
+clear
+htop &
+nano &
+jobs
+fg 1
+jobs
+fg 2
+clear
+ano &
+nano &
+bash
+clear
+ash
+nano &
+clear
+htop &
+jobs
+jobs
+clear
+jobs
+ps
+fg 1
+
+clear
+fg 1
+clear
+jobs
+fg 2
+quit
+quit
+/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+clear
 
 nano &
+htop &
+fg 1
+fg 2
+clear
+jobs
+nano &
+ehal Ranjan:/home/snehal:/bin/bash
+clear
+nano &
+nano &
+htop &
+jobs
+fg 3
+nano &
+clear
+jobs
+fg 3
+0:Snehal Ranjan:/home/snehal:/bin/bash
+nano &
+fg 1
+clear
+jobs
+nano &
+clear
+jobs
+fg 2
+clear
+jobs
+sleep 2
+sleep 2 &
+clear
+josb
+jobs
+nehal:/bin/bash
+nano &
+in/bash
+jobs
+fg 1
+jobs
+jobs
+clear
+jobs
 ps
-jobs
 nano &
-:1000:Snehal Ranjan:/home/snehal:/bin/bash
+sleep 5 &
+clear
+nano 
 jobs
-h
+ps
+sleep 5 &
+jobs
+clear
+jobs
+fg 1
+jobs
+clear
+quit
+/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+clear
+clear
 nano &
-hal Ranjan:/home/snehal:/bin/bash
+fg 1
 jobs
+clear
+htop &
+jobs
+fg 2
+njan:/home/snehal:/bin/bash
+clear
+nano &
+htop &
+fg 2
+clear
+htop &
+jobs
+fg 1
+/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+clear
 
 nano &
 jobs
+fg 1
+jobs
+htop &
+fg 2
+htop &
+clear
+fg 1
+clear
+htop &
+fg 2
+fg 1
+htop
+clear
+htop &
+fg 1
+clear
+/bash
+
+ash
+clear
+clear
+htop
+clear
+[1;5Anano
+clear
+htop
 nano &
-jpbs
-jobs
-firefox &
+clear
+htop &
+htop
+htop
+htop
+htop
+clear
 nano &
-ps
+clear
+htop
+htop &
 jobs
-ps
+fg 2
 jobs
+jobs
+clear
+htop &
+jobs
+fg 3
