@@ -238,7 +238,6 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
             if (bg)
             {
                 setpgid(0, 0);
-                // kill(getpid(), SIGSTOP);
             }
             int return_value = execvp(args[0], args);
             if (return_value == -1)
@@ -249,16 +248,22 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
 
         else
         {
-            if (bg) {
+            if (bg)
+            {
                 add_process(args[0], id);
-
             }
-
 
             if (!bg && pipe_index == -1)
             {
                 int status;
-                waitpid(id, &status, 0);
+                int response = waitpid(id, &status,  WUNTRACED);
+                tcsetpgrp(STDIN_FILENO, getpid());
+                signal(SIGTTOU, SIG_DFL);
+
+                if (WIFSTOPPED(status)) {
+                    add_process(args[0], id);
+                }
+    
             }
         }
     }
@@ -272,8 +277,6 @@ void close_pipes(int fdes[][2], int pipe_count)
     {
         int i1 = close(fdes[i][0]);
         int i2 = close(fdes[i][1]);
-        // if (i1 || i2)
-        //     fprintf(stderr, "Bad FD %d %d %d\n", i, i1, i2);
     }
 }
 

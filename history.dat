@@ -1,212 +1,3 @@
-cat output.txt | wc > output.txt
-cat output.txt
-cat output.txt | ec
-cat output.txt | wc
-pwd
-clear
-history
-clear
-ls
-pwd
-history
-cd ..
-history
-cd   ..
-ls
-clear
-history
-history Downloads
-cd Downloads
-clear
-history | grep cd
-history
-history 5
-clear
-cd ~
-clear
-cd testing
-cd ..
-clear
-quit
-quit
-quit
-quit
-quit
-quit
-clear
-cd testing
-cd ..
-clear
-pwd
-cd ..
-cd ..
-cd ../..
-ls
-cd
-ls
-clear
-pwd
-history
-clear
-nano &
-clear
-htop &
-firefox &
-josbs
-jobs
-fg 1
-nano &
-fg 1
-clear
-nano &
-jobs
-jobs
-nano &
-jobs
-fg 4
-nano &
-nano &
-fg 1
-clear
-htop &
-clear
-jobs
-fg 1
-clear
-jobs
-fg 1
-bg 1
-nano &
-jobs
-jobs
-jobs
-clear
-jobs
-firefox &
-jobs
-kjob 6 9
-jobs
-quit
-nano &
-clear
-jobs
-htop &
-jobs
-clear
-nano &
-jobs
-jobs
-htop clear
-nano &
-jobs
-jobs 
-htop &
-jobs
-clear
-nano &
-clear
-jobs
-htop &
-jobs
-clear
-jobs
-fg 2
-jobs
-kjob 2 9
-jobs
-kjob 1 9
-clear
-jobs
-ps
-clear
-nano
-ps
-clear
-josb
-jobs
-clear
-nano &
-jobs
-ps
-clear
-ps
-nano &
-jobs
-ps
-fg 1
-jobs
-ps
-l:/bin/bash
-jobs
-nano &
-jobs
-kjob 1 9
-jobs
-clear
-ps
-jobs
-htop &
-jobs
-overkill
-jobs
-ps
-clear
-cd -
-cd -
-cd -
-clear
-cd testing
-cd -
-cdehal:/bin/bash
-cd -
-clear
-cd testing
-cd -
-cd -
-cd -
-cd ..
-cd -
-cd -
-cd -
-cd -
-cd -
-cd -
-cd -
-cd -
-cd -
-clear
-history
-quit
-:/var/lib/sddm:/usr/bin/nologin
-usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-make
-clear
-jobs'
-jobs
-htop
-x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-htop
-bin/bash
-clear
-clear
-clear
-nano
-exit
-e/snehal:/bin/bash
-htop &
-fg 1
-clear
-htop &
-jobs
-jobs 
-clear
-htop &
-jobs
-firefox &
-jobs
-firefox &
-jobs
 sleep 5 &
 jobs
 jobs
@@ -219,3 +10,276 @@ clear
 htop
 clear
 clear
+00:Snehal Ranjan:/home/snehal:/bin/bash
+htop
+njan:/home/snehal:/bin/bash
+htop
+/bin/bash
+e/snehal:/bin/bash
+htop
+htop &
+jobs
+jobs
+fg 1
+/snehal:/bin/bash
+ls
+clear
+ls
+pwd
+cat output.txt
+cat output.txt | wc
+clear
+htop &
+jobs
+nano &
+jobs
+clear
+jobs
+jobs 1
+fg 1
+clear
+jobs
+/home/snehal:/bin/bash
+clear
+nano &
+sleep &
+clear
+sleep 10 &
+jobs
+bg 2
+jobs
+bg 3
+jobs
+sleep 500 &
+clear
+jobs
+bg 4
+jobs
+overkill
+jobs
+ps
+clear
+jobs
+clear
+htop
+jobs
+clear
+htop
+htop
+htop &
+jobs
+cclear
+clear
+
+clear
+lear
+clear
+ls
+pwd
+pwd
+cat output.txt
+sort output.txt | wc
+sort ls.c | wc
+clear
+clear
+clear
+clear
+clear
+clear
+clear
+clear
+clasd
+sdv
+sdsd
+v
+sd
+s
+dv
+sgf
+s
+df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bash
+
+ash
+
+in/bash
+
+bash
+
+ash
+
+h
+
+bash
+
+ash
+
+h
+
+bash
+
+ash
+
+ash
+
+bash
+
+/bash
+
+ash
+
+h
+
+/bash
+
+h
+
+/bash
+
+ash
+
+h
+
+ash
+
+ash
+
+h
+
+:/bin/bash
+
+ash
+
+/bash
+
+ash
+
+in/bash
+
+ash
+
+bash
+
+h
+
+ash
+
+/bash
+
+ash
+
+in/bash
+
+ash
+
+h
+
+bash
+
+ash
+
+ash
+
+ash
+
+bash
+
+/bin/bash
+
+ash
+
+nehal:/bin/bash
+
+ash
+
+bash
+
+/bin/bash
+
+ash
+
+ash
+clear
+
+ash
+clear
+clear
+clear
+clear
+ktop Display Manager:/var/lib/sddm:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+clear
+quit
+htop &
+clear
+sleep 5000
+sleep 500 &
+jobs
+jobs
+sleep 500 &
+clear
+jobs
+htop
+jobs
+mux:x:140:140:usbmux user:/:/usr/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+htop &
+jobs
+htop
+jobs
+sleep 500 &
+jobs
+00:Snehal Ranjan:/home/snehal:/bin/bash
+sleep 500 &
+jobs
+htop
+sleep 5
+jobs
+jobs
+bg 3
+jobs
+slepp 50 &
+sleep 50 &
+clear
+jobs
+bg 5
+jobs
+jobs
+jobs
+overkill
+jobs
+ps

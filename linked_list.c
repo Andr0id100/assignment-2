@@ -115,8 +115,9 @@ int is_stopped(int pid) {
         return -1;
     char status;
 
-    fscanf(fp, "%.d %.s %c", &status);
+    fscanf(fp, "%*d %*s %c", &status);
     fclose(fp);
+
 
     return !(status == 'R' || status == 'S');
 
