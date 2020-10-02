@@ -23,6 +23,6 @@ void unset_env(char** args) {
         printf("Invalid number of arguments\n");
     }
     else {
-        unsetenv(args[1]);
+        unsetenv(args[0]);
     }
 }

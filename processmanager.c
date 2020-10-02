@@ -167,7 +167,7 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
     {
         pwd();
     }
-    else if (strcmp(args[0], "exit") == 0 ||  strcmp(args[0], "quit") == 0)
+    else if (strcmp(args[0], "exit") == 0 || strcmp(args[0], "quit") == 0)
     {
         kill(getpid(), SIGINT);
     }
@@ -199,16 +199,20 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
     {
         display_processes();
     }
-    else if (strcmp(args[0], "kjob") == 0) {
+    else if (strcmp(args[0], "kjob") == 0)
+    {
         kjob(args);
     }
-    else if (strcmp(args[0], "fg") == 0) {
+    else if (strcmp(args[0], "fg") == 0)
+    {
         fg(args);
     }
-    else if (strcmp(args[0], "bg") == 0) {
+    else if (strcmp(args[0], "bg") == 0)
+    {
         bg(args);
     }
-    else if (strcmp(args[0], "overkill") == 0) {
+    else if (strcmp(args[0], "overkill") == 0)
+    {
         kill_all_children();
     }
     else
@@ -248,10 +252,7 @@ void execute_process(char **args, int fdes[][2], int pipe_index)
         else
         {
 
-            if (bg)
-            {
-                add_process(job_counter++, args[0], id);
-            }
+            add_process(job_counter++, args[0], id);
 
             if (!bg && pipe_index == -1)
             {

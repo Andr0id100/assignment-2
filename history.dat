@@ -1,84 +1,3 @@
-clear
-htop &
-jobs
-fg 2
-nano &
-bash
-jobs
-fg 1
-jobs
-
-clear
-nano &
-fg 1
-jobs
-n:/home/snehal:/bin/bash
-nano &
-clear
-jobs
-fg 1
-clear
-nano &
-fg 1
-jobs
-exit
-exit
-bin/bash
-clear
-nano
-htop
-ls
-cat output.txt | wc
-clear
-nano &
-fg 1
-htop &
-clear
-clear
-ome/snehal:/bin/bash
-nano &
-htop &
-clear
-fg 1
-htop &
-:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-nano &
-jobs
-clear
-htop &
-nano &
-jobs
-fg 1
-jobs
-fg 2
-clear
-ano &
-nano &
-bash
-clear
-ash
-nano &
-clear
-htop &
-jobs
-jobs
-clear
-jobs
-ps
-fg 1
-
-clear
-fg 1
-clear
-jobs
-fg 2
-quit
-quit
-/nologin
-snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
-clear
-
-nano &
 htop &
 fg 1
 fg 2
@@ -208,3 +127,92 @@ clear
 htop &
 jobs
 fg 3
+/bin/nologin
+snehal:x:1000:1000:Snehal Ranjan:/home/snehal:/bin/bash
+clear
+nano
+vi
+clear
+nano &
+clear
+htop
+htop
+clear
+htop &
+jobs
+jobs
+fg 1
+jobs
+htop &
+jobs
+htop
+e/snehal:/bin/bash
+nano &
+clear
+jobs
+htop &
+jobs
+pinfo
+clear
+jobs
+fg 3
+jobs
+htop &
+jobs
+fg 1
+jobs
+clear
+jobs
+fg 5
+hal:/bin/bash
+clear
+
+
+clear
+htop
+htop 
+home/snehal:/bin/bash
+./shell
+clear
+nano 
+clear
+./shell
+0:Snehal Ranjan:/home/snehal:/bin/bash
+clear
+
+ls
+cd testing
+printenv PATH
+setenv PATH blah
+printenv PATH blah
+clear
+printenv HOME
+setenv HOME blah
+printenv HOME 
+unsetenv HOME
+printenv HOME
+printenv h
+unsetenv HOME
+unsetenv HOME
+unsetenv HOME
+printenv HOME
+printenv HOEME
+printenv HOME
+setenv HOME /home
+printenv HOME
+unsetenv HOME
+printenv HOME
+clear
+clear
+nano &
+jobs
+jobs
+jobs
+clear
+jobs
+kjob 2 9
+jobs
+overkill
+jobs
+clear
+ps
